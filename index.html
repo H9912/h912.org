@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>h912 - Welcome!</title>
+    <link rel="icon" type="image/png" href="NO.png"/>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media only screen and (max-width: 1600px) {
+	        .sdf {
+		        display: none;
+	        }
+	        .des {
+		        flex-wrap: wrap;
+                width: 80%;
+	        }
+        }
+    </style>
+</head>
+<body>
+    <div class="des3">
+        <div class="des2">
+            <h2>Hi! I'm h912 and i'm making <div class='console-container'><span id='text'></span>
+                    <div class='console-underscore' id='console'>&#95;</div>
+            </h2>
+        </div>
+    </div>
+    <img class="sdf" src="pic/280232527_581138826972641_6211699440447460702_n.jpeg">
+    <div class="h912"; style="margin-left: 5%;">
+        <a href="https://instagram.com/h912_palaces"><img style="width: 50px; box-shadow: none !important;"
+            src="pic/Old+IG+Posts+(3).png"></a>
+        <a href="https://twitter.com/H91213"><img style="width: 50px; box-shadow: none !important;"
+             src="pic/icone-twitter-ronde-grise.png""></a>
+        <a href="contact"><img style="width: 50px; box-shadow: none !important;"
+              src="pic/email.png"></a>
+    </div>
+    <div class="des">
+        <p> Hi! My name is Corentin and i live in France. I am in 9th grade at <a href="https://lc-saint-louis.loire-atlantique.e-lyco.fr/">St-Louis</a>, in St-Nazaire. I'm
+            currently working on  <a href="Aria">Aria</a>, a sci-fi & pre-apocalyptic video-game, and i'm playing music.
+            I spend most of my time learning to draw, to code, to make music and of course doing my homework *sigh*. Just all the skills i need for my game.
+            On this website you can find all the stuff i put my heart into, for now there is not everything, cause it's still in alpha. Thanks a lot <a href="https://instagram.com/sl_liberty_ls">sl_liberty_ls</a> !
+        </p> 
+    </div>
+    <div id="parallax">
+    </div>
+    <div class="ligne1">
+        <div class="st">
+            <a href="Fuze"><img src="pic/fuze.jpg"></a>
+        </div>
+        <div class="nd">
+            <a href="Aria"><img src="pic/unknown.png"></a>
+        </div>
+    </div>
+    <div class="ligne2">
+        <div class="rd">
+            <a href="Fuze">FuzeIII</a>
+        </div>
+        <div class="th">
+            <a href="Aria">Aria</a>
+        </div>
+    </div>
+
+    <div class="ligne1">
+        <div class="st">
+            <a href="Art2"><img src="pic/HOTEL.jpg"></a>
+        </div>
+        <div class="nd">
+            <a href="Art1"><img src="pic/Art_No.1.jpg"></a>
+        </div>
+    </div>
+    <div class="ligne2">
+        <div class="rd">
+            <a href="Art2">ART No.2</a>
+        </div>
+        <div class="th">
+            <a href="Art1">ART No.1</a>
+        </div>
+    </div>
+</body>
+<footer>
+    <div style="border-top: solid 4px grey; display: flex; margin-top: 6%;">
+            <div style="display: flex; margin:auto;">
+            <p class="h912" style="margin-right: 20px;">h912</p>
+            <a class="h912" style="position: relative; text-align: bottom; margin-top: 20px;"
+                href="https://instagram.com/h912_palaces"><img style="box-shadow: none !important;"
+                    src="pic/Old+IG+Posts+(3).png" width="24px"></a>
+            <a class="h912" style="position: relative; text-align: bottom; margin-top: 20px;"
+                    href="https://twitter.com/H91213"><img style="box-shadow: none !important;"
+                     src="pic/icone-twitter-ronde-grise.png" width="24px"></a>
+        </div>
+        <div class="foot" style="display:flex; font-weight: bolder; font-family: Roboto Mono; font-size: x-large; color: grey;">
+            <p style="margin: auto;">h912 - 2022</p>
+        </div>
+        <div style="display: flex; margin: auto;">
+            <p class="h912" style="margin-right: 20px;">sl_liberty_ls</p>
+            <a class="h912" style="position: relative; text-align: bottom; margin-top: 20px;"
+                href="https://instagram.com/sl_liberty_ls"><img style="box-shadow: none !important;"
+                    src="pic/Old+IG+Posts+(3).png" width="24px !important"></a>
+            <a class="h912" style="position: relative; text-align: bottom; margin-top: 20px;"
+                    href="https://github.com/PewFam"><img style="box-shadow: none !important;"
+                        src="pic/output-onlinepngtools.png" width="24px"></a>
+        </div>
+    </div>
+</footer>
+</html>
+
+<script>
+    // function([string1, string2],target id,[color1,color2])    
+    consoleText(['Drawings', 'Video-games', 'Paintings', 'Photos', 'Music'], 'text', ['tomato', 'rebeccapurple', 'lightblue', 'orange', '#957DAD']);
+
+    function consoleText(words, id, colors) {
+        if (colors === undefined) colors = ['#fff'];
+        var visible = true;
+        var con = document.getElementById('console');
+        var letterCount = 1;
+        var x = 1;
+        var waiting = false;
+        var target = document.getElementById(id)
+        target.setAttribute('style', 'color:' + colors[0])
+        window.setInterval(function () {
+
+            if (letterCount === 0 && waiting === false) {
+                waiting = true;
+                target.innerHTML = words[0].substring(0, letterCount)
+                window.setTimeout(function () {
+                    var usedColor = colors.shift();
+                    colors.push(usedColor);
+                    var usedWord = words.shift();
+                    words.push(usedWord);
+                    x = 1;
+                    target.setAttribute('style', 'color:' + colors[0])
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (letterCount === words[0].length + 1 && waiting === false) {
+                waiting = true;
+                window.setTimeout(function () {
+                    x = -1;
+                    letterCount += x;
+                    waiting = false;
+                }, 1000)
+            } else if (waiting === false) {
+                target.innerHTML = words[0].substring(0, letterCount)
+                letterCount += x;
+            }
+        }, 120)
+        window.setInterval(function () {
+            if (visible === true) {
+                con.className = 'console-underscore hidden'
+                visible = false;
+
+            } else {
+                con.className = 'console-underscore'
+
+                visible = true;
+            }
+        }, 400)
+    }
+
+
+
+    function disableselect(e) {
+        return false
+    }
+
+    function reEnable() {
+        return true
+    }
+
+    //if IE4+ 
+
+    document.oncontextmenu = new Function("return false")
+    //if NS6 
+    if (window.sidebar) {
+        document.onmousedown = disableselect
+        document.onclick = reEnable
+    }
+    //--> 
+
+    (function () {
+        // Add event listener
+        document.addEventListener("mousemove", parallax);
+        const elem = document.querySelector("#parallax");
+        // Magic happens here
+        function parallax(e) {
+            let _w = window.innerWidth / 2;
+            let _h = window.innerHeight / 2;
+            let _mouseX = e.clientX;
+            let _mouseY = e.clientY;
+
+            let _depth3 = `${50 - (_mouseX - _w) * 0.11}% ${50 - (_mouseY - _h) * 0.11}%`;
+            let x = `${_depth3}`;
+
+            elem.style.backgroundPosition = x;
+        }
+
+    })();
+
+</script>

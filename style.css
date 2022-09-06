@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap');
+
+::-webkit-scrollbar {
+	background-color: rgb(40, 40, 40);
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgb(131, 131, 131);
+}
+
+a{
+	color: tomato;
+	text-shadow:none ;
+	text-decoration: none;
+	transition: all 1s;
+}
+a:hover{
+	color: red;
+	text-shadow: 1px 1px 1px rgba(235, 210, 27, 0.462);
+}
+.sdf{
+	width:30%;
+	height: auto;
+	box-shadow: rgb(0, 0, 0)  0em .3em 1em;
+	flex-wrap: wrap;
+	display: flex;
+	position: absolute;
+	top: 7%;
+	right: 0%;
+	left: 60%;
+
+}
+@media only screen and (max-width: 600px) {
+	.sdf {
+		display: none;
+	}
+	.des {
+		margin-right: auto;
+	}
+}
+img{
+	box-shadow: rgb(0, 0, 0)  0em .3em 1em;
+	cursor:none; pointer-events: none;
+}
+iframe{
+	box-shadow: rgb(0, 0, 0)  0em .3em 1em;
+}
+body{
+    font-family:Space Mono !important;
+    color: whitesmoke;
+    background:rgb(33, 33, 33);
+    margin: 0px;
+    padding: 0px;
+    animation: back 10s ease-in-out 0s 1 normal forwards;    
+}
+.des{
+    margin-left: 5%;
+	width: 36%;
+	margin-right: 0%;
+    font-size: clamp(20px, 50%, 30px);
+    text-align: left;
+	display: flex;
+	white-space: normal;
+}
+.des2{
+	display: flex;
+    animation: anim 20s ease-in-out 0s  normal backwards;
+	font-size: clamp(35px, 50%, 35px);
+    
+}
+.des3{
+	display: flex;
+	margin-left:5%;
+    
+	
+}
+.ligne1{
+	display: flex; 
+	margin-top: 10%;
+}
+
+.ligne2{
+	font-size: x-large;
+	display: flex;
+	margin-top: 2%;
+	max-width:100%;
+}
+.st, .nd{
+	
+	display:flex;
+	margin: auto;
+	max-width:100%;
+	
+}
+.rd, .th{
+	margin: auto;
+	display: flex;
+	max-width:100%;	
+}
+.st img , .nd img , .rd img , .th img{
+	
+	margin: auto;
+	width: 600px;
+	max-width:90%;
+	margin-left: 5% ;
+	margin-right: 5%;
+}
+
+
+
+body{
+	margin: 0;
+	animation: fadeIn 3s;	
+  }
+  #parallax {
+	margin: auto;
+	margin-top:7%;
+	display: flex;
+	box-shadow: rgb(0, 0, 0)  0em .3em 1em;
+	width: 100%;
+	height: 60vh;
+	background-size: 100%;
+	background-image: url(pic/ARRIVAL.jpg);
+	background-repeat: no-repeat;
+	
+  }
+  h1 {
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(246, 161, 105);
+	font-family: "BhuTuka Expanded One";
+	text-transform: uppercase;
+	opacity: .15;
+	font-size: 70px;
+  }
+
+
+body .h912{
+	color: grey;
+}
+.h912{
+	margin: 20px auto;
+	
+}
+
+
+@keyframes anim {
+	0%,
+	100% {
+		transform: translateY(0) rotate(0);
+		transform-origin: 50% 50%;
+	}
+
+	0% {
+		transform: translateY(-30px);
+	}
+
+	8% {
+		transform: translateY(15px);
+	}
+
+	13% {
+		transform: translateY(-15px);
+	}
+
+	20% {
+		transform: translateY(9px);
+	}
+
+	25% {
+        transform: translateY(0);
+	}
+   
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+.hidden {
+  opacity:0;
+}
+.console-container {
+ 
+  font-family:Roboto Mono;
+  font-size:1.4em;
+
+ 
+  display:block;
+  
+  color:white;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:0px;
+}
+
+.Aria {
+	display: grid;
+	gap: 1rem;
+	align-content: center;
+	grid-template-columns: 3fr 3fr;
+	margin-left: 5%;
+}

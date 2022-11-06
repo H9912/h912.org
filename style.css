@@ -58,7 +58,7 @@ body{
     margin-left: 5%;
 	width: 36%;
 	margin-right: 0%;
-    font-size: clamp(20px, 50%, 30px);
+    font-size: clamp(21px, 50%, 30px);
     text-align: left;
 	display: flex;
 	white-space: normal;
@@ -137,16 +137,6 @@ body{
 	font-size: 70px;
   }
 
-
-body .h912{
-	color: grey;
-}
-.h912{
-	margin: 20px auto;
-	
-}
-
-
 @keyframes anim {
 	0%,
 	100% {
@@ -190,10 +180,7 @@ body .h912{
  
   font-family:Roboto Mono;
   font-size:1.4em;
-
- 
   display:block;
-  
   color:white;
   top:0;
   bottom:0;
@@ -202,7 +189,7 @@ body .h912{
 
 }
 .console-underscore {
-   display:inline-block;
+	display:inline-block;
   position:relative;
   top:-0.14em;
   left:0px;
@@ -214,4 +201,21 @@ body .h912{
 	align-content: center;
 	grid-template-columns: 3fr 3fr;
 	margin-left: 5%;
+}
+
+.footer {
+	border-top: solid 4px grey;
+	display: flex;
+	margin-top: 6%;
+	text-align: bottom;
+	box-shadow: none;
+	justify-content: center;
+	font-color: gray;
+	color: gray;
+}
+
+.imgFooter {
+	margin: 20px;
+	box-shadow: none;
+
 }
